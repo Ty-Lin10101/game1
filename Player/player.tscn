@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ct4junrempda1"]
+
+[ext_resource type="Script" uid="uid://d1hhxlxf40ax1" path="res://Player/player_movement.gd" id="1_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://bhovalq6umwjp" path="res://icon.svg" id="1_oqfe6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
+size = Vector2(118, 115)
+
+[node name="Player" type="Node2D" unique_id=496143565]
+script = ExtResource("1_4ntmi")
+
+[node name="PlayerBody" type="CharacterBody2D" parent="." unique_id=363739199]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerBody" unique_id=13314378]
+texture = ExtResource("1_oqfe6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody" unique_id=2127125259]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_4ntmi")
+
+[node name="DashTimer" type="Timer" parent="." unique_id=384458212]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
