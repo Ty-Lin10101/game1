@@ -8,6 +8,11 @@ size = Vector2(118, 115)
 
 [node name="Player" type="Node2D" unique_id=496143565]
 script = ExtResource("1_4ntmi")
+movement_acceleration = null
+movement_friction = null
+dash_speed = null
+dash_duration = null
+dash_glide_friction = null
 
 [node name="PlayerBody" type="CharacterBody2D" parent="." unique_id=363739199]
 unique_name_in_owner = true
@@ -21,5 +26,5 @@ shape = SubResource("RectangleShape2D_4ntmi")
 
 [node name="DashTimer" type="Timer" parent="." unique_id=384458212]
 unique_name_in_owner = true
-wait_time = 2.0
+wait_time = 0.005
 one_shot = true
